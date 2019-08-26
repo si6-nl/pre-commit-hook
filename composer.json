@@ -1,0 +1,28 @@
+{
+    "name": "si6/pre-commit-hook",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Reishou",
+            "email": "reishou90@gmail.com"
+        }
+    ],
+    "require": {
+        "squizlabs/php_codesniffer": "^3.4",
+        "phpunit/phpunit": "^8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Si6\\PreCommitHook\\": "src/",
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Si6\\PreCommitHook\\Installer::postInstall"
+        ],
+        "post-update-cmd": [
+            "Si6\\PreCommitHook\\Installer::postInstall"
+        ]
+    }
+}
