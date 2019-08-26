@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ruleset name="SI6 Coding Standard">
+    <description>SI6 Team PHP Coding Standard</description>
+
+    <arg name="colors"/>
+    <arg value="sp"/>
+    <arg value="q"/>
+    <arg value="n"/>
+
+    <file>./src</file>
+
+    <rule ref="PSR12"/>
+</ruleset>
