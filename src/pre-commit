@@ -41,7 +41,7 @@ then
 fi
 
 exec < /dev/tty
-./vendor/phpunit/phpunit --colors -c $(echo $PWD)/phpunit.xml --testdox
+./vendor/bin/phpunit --colors -c $(echo $PWD)/phpunit.xml --testdox
 #Get the last processes exit code
 rc=$?
 if [[ $rc != 0 ]] ; then
@@ -52,7 +52,7 @@ if [[ $rc != 0 ]] ; then
     elif [ "$YN" != "y" ]; then
         exit $rc;
     fi
-    ./vendor/phpunit/phpunit --colors -c $(echo $PWD)/phpunit.xml --verbose
+    ./vendor/bin/phpunit --colors -c $(echo $PWD)/phpunit.xml --verbose
 fi
 
 exit $rc;
