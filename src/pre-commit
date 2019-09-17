@@ -41,6 +41,14 @@ then
 fi
 
 exec < /dev/tty
+
+echo "Updating base si6"
+composer update si6/base-rest-framework
+rc=$?
+if [[ $rc != 0 ]] ; then
+  echo "Composer update error"
+  exit $rc;
+fi
 ./vendor/bin/phpunit --colors -c $(echo $PWD)/phpunit.xml --testdox
 #Get the last processes exit code
 rc=$?
